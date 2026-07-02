@@ -18,16 +18,23 @@ You sit down to model a business plan and either watch an agent churn for half a
 
 ## Install
 
-A skill is just this folder with a readable `SKILL.md`. Read it first, then drop it where your agent looks for skills.
+A skill is just this folder with a readable [`SKILL.md`](./SKILL.md). Read it first (no black box), then install it.
 
-**Claude Code** (loads automatically when the moment fits, or invoke it by name):
+**Quickest: let your agent install it.** Paste this to Claude Code, or any agent that can browse the web and write files:
+
+```
+Install the "business-plan-sparring" skill from
+https://github.com/layerzlabs/finance-cookbook (folder
+skills/business-plan-sparring). Read its SKILL.md, then copy the whole folder
+into my skills directory: ~/.claude/skills/ for personal use, or .claude/skills/
+in this project. Keep SKILL.md unchanged.
+```
+
+**By hand** (Claude Code):
 
 ```bash
-# personal, available in every project:
-cp -r skills/business-plan-sparring ~/.claude/skills/
-
-# or project-scoped, shared with your repo:
-cp -r skills/business-plan-sparring .claude/skills/
+cp -r skills/business-plan-sparring ~/.claude/skills/   # personal, every project
+cp -r skills/business-plan-sparring .claude/skills/      # or project-scoped
 ```
 
 **Any other agent** (Claude Desktop, Cursor, a custom setup): the [`SKILL.md`](./SKILL.md) body is a plain system prompt. Paste it into a project, a custom instruction, or a system prompt and it works the same way. You own the file, so tune it to your practice.

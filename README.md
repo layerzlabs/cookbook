@@ -60,20 +60,26 @@ Small **listen-first consultants** you install. Unlike a recipe you paste, a ski
 
 | Skill | What it does |
 |-------|--------------|
-| [Business plan sparring partner](./skills/business-plan-sparring/SKILL.md) | Breaks the blank-page freeze: gets a rough founder model on the table fast, challenges every assumption like a seed investor by Socratic questioning, helps you pick your KPIs and sketch the big-picture dashboard, and teaches the finance as it goes |
+| [Business plan sparring partner](./skills/business-plan-sparring/) | Breaks the blank-page freeze: gets a rough founder model on the table fast, challenges every assumption like a seed investor by Socratic questioning, helps you pick your KPIs and sketch the big-picture dashboard, and teaches the finance as it goes |
 
 ### Installing a skill
 
-A skill is just a folder with a readable `SKILL.md`. Open it and read it first (that is the point, no black box), then drop it where your agent looks for skills.
+A skill is just a folder with a readable `SKILL.md`. Open it and read it first (that is the point, no black box), then install it.
 
-**Claude Code** (loads automatically when the moment fits, or invoke by name):
+**Quickest: let your agent install it.** Paste this to Claude Code, or any agent that can browse the web and write files:
+
+```
+Install a skill from https://github.com/layerzlabs/finance-cookbook.
+Read skills/<skill-name>/SKILL.md, then copy the whole skills/<skill-name>
+folder into my skills directory: ~/.claude/skills/ for personal use, or
+.claude/skills/ in this project. Keep SKILL.md unchanged.
+```
+
+**By hand** (Claude Code):
 
 ```bash
-# personal, available in every project:
-cp -r skills/business-plan-sparring ~/.claude/skills/
-
-# or project-scoped, shared with your repo:
-cp -r skills/business-plan-sparring .claude/skills/
+cp -r skills/business-plan-sparring ~/.claude/skills/   # personal, every project
+cp -r skills/business-plan-sparring .claude/skills/      # or project-scoped
 ```
 
 **Any other agent** (Claude Desktop, Cursor, a custom setup): the `SKILL.md` body is a plain system prompt. Paste it into a project, a custom instruction, or a system prompt and it works the same way. You own the file, so tune it to your practice.
