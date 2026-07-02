@@ -1,16 +1,20 @@
 # Contributing
 
-**We share the recipe, not the black box.** This cookbook ships prompts and patterns, never installable skills. Keep that line in mind for anything you submit.
+**We share the recipe, not the black box.** Everything here is plain, readable Markdown you can open, audit and fork. The enemy is never the format, it is the black box: an opaque artifact that hides its logic or runs a canned process on you. Keep that line in mind for anything you submit.
 
-This cookbook grows from real work. Two ways to contribute.
+This cookbook grows from real work. Three ways to contribute.
 
 ## Add a recipe
 
-A recipe is a **prompt or pattern** you have actually used for financial work with an AI agent. We ship prompts, not packaged skills. If your contribution is a skill, contribute the **Custom-skill** recipe that creates or hardens it (so people own and audit the result), not the skill file itself.
+A recipe is a **prompt or pattern** you have actually used for financial work with an AI agent.
 
 State the **kind** at the top of the recipe:
 - **Prompt**: it does the task in-session.
 - **Custom-skill**: it forges or hardens a skill, script or `FINANCE.md` the user owns.
+
+## Add a skill
+
+A skill is a small **listen-first consultant** that lives in `skills/your-skill-name/SKILL.md`. The bar that keeps it out of black-box territory: it must **ask before it acts** and adapt to the case in front of it, never unroll a fixed template. It must be readable Markdown a user can audit and fork, name the wall it cannot cross (structure, persistence), and be field-tested like everything else. If your contribution only unrolls a rigid process, it is not a skill we want, rewrite it as a prompt recipe or make it listen first.
 
 1. Copy [`TEMPLATE.md`](./TEMPLATE.md) into `recipes/your-recipe-name.md`.
 2. Fill the sections: the kind, the problem, the prompt, where it breaks, notes.

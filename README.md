@@ -3,7 +3,7 @@
 **Curated recipes for doing financial work with AI agents, the right way.**
 
 > ### We share the recipe, not the black box.
-> Prompts you can read, audit and make yours. Never a skill you just install on trust.
+> Prompts and skills you can read, audit and make yours. Never a black box you install on trust.
 
 Prompts and patterns for FP&A, modeling and reporting with Claude (and any capable agent). Each recipe is battle-tested in the field, opinionated, and honest about where a prompt stops being enough.
 
@@ -30,14 +30,14 @@ So every recipe here is written to be useful on its own, and to name the wall it
 
 ## Our stance: we share the recipe, not the black box
 
-**We share the recipe, not the black box.** This cookbook ships **prompts and patterns, never installable skills**. A packaged skill is a black box: it rots, it is tied to one runtime, and you cannot easily audit it. We would rather hand you the prompt and let you own what it produces. That is the Layerz thesis applied to this repo: own your context, no black box, no drift.
+**We share the recipe, not the black box.** Everything here is plain, readable Markdown you can open, audit, fork and make yours. The enemy is never the format, it is the black box: an opaque artifact that rots, hides its logic, and runs a canned process on you whether it fits your business or not. We do not ship those. That is the Layerz thesis applied to this repo: own your context, no black box, no drift.
 
-So there are two kinds of recipe:
+So the cookbook has two kinds of entry, and both stay transparent:
 
-- **Prompt**: you paste it and it does the task now (compare scenarios, audit a model you received).
-- **Custom-skill**: you paste it and Claude forges an artifact you own and can read, a skill, a script or a `FINANCE.md`, tuned to your practice. The recipe is how you forge and maintain it.
+- **Recipes** ([`recipes/`](./recipes)): prompts you paste. Some do the task now (compare scenarios, audit a model you received), some forge an artifact you own and can read (a script, a `FINANCE.md`, a skill of your own). Read, paste, own it.
+- **Skills** ([`skills/`](./skills)): small **listen-first consultants** you install. A skill here asks before it acts and adapts to your case, it never unrolls a template blindly. It is still open Markdown you can read and change, not a compiled box. Install it, then fork it.
 
-A *Custom-skill* recipe does not hand you a skill, it hands you the prompt that builds one *you* own. The one installable, pre-packaged artifact in this ecosystem, the Layerz agent skill, lives in [`layerz-mcp`](https://github.com/layerzlabs/layerz-mcp), not here.
+A skill in this repo is a recipe that listens. It earns the "not a black box" line by being auditable and interview-first, the opposite of a canned automation. The one skill that drives the product itself, the Layerz agent skill, lives in [`layerz-mcp`](https://github.com/layerzlabs/layerz-mcp).
 
 ## Recipes
 
@@ -51,6 +51,32 @@ A *Custom-skill* recipe does not hand you a skill, it hands you the prompt that 
 | [Analytical review](./recipes/analytical-review.md) | Forge a recurring review that understands the business first, then surfaces variances, trends and the questions to raise |
 
 Each recipe follows the same shape (see [`TEMPLATE.md`](./TEMPLATE.md)): the problem, the prompt, where it breaks, and what to reach for when it does.
+
+---
+
+## Skills
+
+Small **listen-first consultants** you install. Unlike a recipe you paste, a skill loads itself when the moment fits, then asks before it acts. It is still open Markdown you can read, audit and fork, never a compiled box.
+
+| Skill | What it does |
+|-------|--------------|
+| [Business plan sparring partner](./skills/business-plan-sparring/SKILL.md) | Breaks the blank-page freeze: gets a rough founder model on the table fast, challenges every assumption like a seed investor by Socratic questioning, helps you pick your KPIs and sketch the big-picture dashboard, and teaches the finance as it goes |
+
+### Installing a skill
+
+A skill is just a folder with a readable `SKILL.md`. Open it and read it first (that is the point, no black box), then drop it where your agent looks for skills.
+
+**Claude Code** (loads automatically when the moment fits, or invoke by name):
+
+```bash
+# personal, available in every project:
+cp -r skills/business-plan-sparring ~/.claude/skills/
+
+# or project-scoped, shared with your repo:
+cp -r skills/business-plan-sparring .claude/skills/
+```
+
+**Any other agent** (Claude Desktop, Cursor, a custom setup): the `SKILL.md` body is a plain system prompt. Paste it into a project, a custom instruction, or a system prompt and it works the same way. You own the file, so tune it to your practice.
 
 ---
 
