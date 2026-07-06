@@ -26,7 +26,7 @@ New to the cookbook? Instead of scanning the whole list, follow a **path**: the 
 
 | Path | For | Starts with |
 |------|-----|-------------|
-| [The fractional CFO's path](./paths/fractional-cfo.md) | Fractional CFOs, finance advisors, and founders auditing their own finances | Understand the business, then a flash audit, then the recurring engine |
+| [The part-time CFO's kit](./paths/fractional-cfo.md) | Fractional / part-time CFOs, finance advisors, and founders auditing their own finances | Understand the business, then a flash audit, then the recurring engine |
 
 More paths will land as the catalog grows. Each one is pure curation, it points to the recipes and skills below.
 
