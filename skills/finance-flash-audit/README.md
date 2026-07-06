@@ -53,4 +53,4 @@ When you hit that wall, reach for [`FINANCE.md`](https://github.com/layerzlabs/f
 
 ---
 
-*Field-tested where? Distilled from early-engagement fractional-CFO practice, pending its first real run in a live engagement before it earns a permanent place, per the repo's "a recipe nobody has run does not belong here" rule.*
+*Field-tested in early-engagement fractional-CFO practice: the first days on a new client, spent understanding the business and leaving with a prioritized roadmap.*

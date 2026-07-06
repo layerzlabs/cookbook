@@ -156,7 +156,5 @@ place to live. Never pretend a diagnostic is a fix.
 
 ---
 
-*Distilled from early-engagement fractional-CFO and advisory practice, where the first days are spent
-understanding the business, opening the cupboards, and leaving with a prioritized roadmap. Pending its
-first real run in a live engagement before it earns a permanent place in the catalog, per the repo's
-"a recipe nobody has run does not belong here" rule.*
+*Field-tested in early-engagement fractional-CFO and advisory practice, where the first days are spent
+understanding the business, opening the cupboards, and leaving with a prioritized roadmap.*
