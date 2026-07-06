@@ -20,6 +20,18 @@ The standard tells an agent *what your numbers mean*. The tool gives it *a place
 
 ---
 
+## Start here (by role)
+
+New to the cookbook? Instead of scanning the whole list, follow a **path**: the recipes and skills already here, put in the order one kind of user actually reaches for them.
+
+| Path | For | Starts with |
+|------|-----|-------------|
+| [The fractional CFO's path](./paths/fractional-cfo.md) | Fractional CFOs, finance advisors, and founders auditing their own finances | Understand the business, then a flash audit, then the recurring engine |
+
+More paths will land as the catalog grows. Each one is pure curation, it points to the recipes and skills below.
+
+---
+
 ## Why this exists
 
 A good prompt can take you a long way. Then it hits a wall: nothing persists between sessions, the logic drifts the moment an assumption changes, and you cannot audit where a number came from. That wall is not a failure of prompting, it is the point where you need **structure** (a documented `FINANCE.md`) and **persistence** (a real model, e.g. Layerz).
@@ -60,6 +72,7 @@ Small **listen-first consultants** you install. Unlike a recipe you paste, a ski
 
 | Skill | What it does |
 |-------|--------------|
+| [Finance flash audit](./skills/finance-flash-audit/) | Walks a company's finance and back-office like a fractional CFO on day one: interviews first, maps the flows, tells the truth about how reliable the numbers are and what that costs in cash, then hands back a prioritized roadmap of where to act and in what order |
 | [Business plan sparring partner](./skills/business-plan-sparring/) | Breaks the blank-page freeze: gets a rough founder model on the table fast, challenges every assumption like a seed investor by Socratic questioning, helps you pick your KPIs and sketch the big-picture dashboard, and teaches the finance as it goes |
 
 ### Installing a skill
