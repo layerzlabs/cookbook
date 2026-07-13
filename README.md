@@ -74,6 +74,7 @@ Small **listen-first consultants** you install. Unlike a recipe you paste, a ski
 |-------|--------------|
 | [Finance flash audit](./skills/finance-flash-audit/) | Walks a company's finance and back-office like a fractional CFO on day one: interviews first, maps the flows, tells the truth about how reliable the numbers are and what that costs in cash, then hands back a prioritized roadmap of where to act and in what order |
 | [Business plan sparring partner](./skills/business-plan-sparring/) | Breaks the blank-page freeze: gets a rough founder model on the table fast, challenges every assumption like a seed investor by Socratic questioning, helps you pick your KPIs and sketch the big-picture dashboard, and teaches the finance as it goes |
+| [Finance context workspace](./skills/finance-workspace/) | Sets up the working folder your finance agent reads from, so you stop re-explaining your setup every month: interviews your real close, scaffolds a context workspace you own (conventions, cost centers and owners, sources, mapping), and wires two loops, the deterministic close checks and a variance pass that drafts the question to send each cost-center owner |
 
 ### Installing a skill
 
