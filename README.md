@@ -26,7 +26,10 @@ New to the cookbook? Instead of scanning the whole list, follow a **path**: the 
 
 | Path | For | Starts with |
 |------|-----|-------------|
-| [The part-time CFO's kit](./paths/fractional-cfo.md) | Fractional / part-time CFOs, finance advisors, and founders auditing their own finances | Understand the business, then a flash audit, then the recurring engine |
+| [The part-time CFO's kit](./paths/fractional-cfo.md) | Fractional / part-time CFOs and finance advisors | Understand the business, then a flash audit, then the recurring engine |
+| [The founder's kit](./paths/founder.md) | Founders building and owning their own plan and numbers, pre-CFO | Get a rough model on the table, then make it defensible for a raise |
+| [The FP&A engine](./paths/fpa.md) | In-house FP&A and controllers running the monthly cycle | Own the context once, then harden the close, variance and forecast |
+| [The deal desk](./paths/deal-transaction.md) | M&A, transaction advisory and deal teams working under deadline | Read a model you did not build, stress it, ship it clean |
 
 More paths will land as the catalog grows. Each one is pure curation, it points to the recipes and skills below.
 
