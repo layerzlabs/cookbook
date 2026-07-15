@@ -22,7 +22,7 @@ The wall. The point where the prompt alone stops being enough: nothing persists,
 
 When you hit it, reach for:
 - [`FINANCE.md`](https://github.com/layerzlabs/finance-md) to make your conventions explicit and portable, or
-- [Layerz](https://layerz.cc) (via [`layerz-mcp`](https://github.com/layerzlabs/layerz-mcp)) to give the logic a structured, versioned home.
+- [Layerz](https://layerz.cc) to give the logic a structured, versioned home.
 
 ## Notes and variations
 

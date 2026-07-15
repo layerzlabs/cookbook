@@ -43,7 +43,7 @@ The point of the persona is behavioral: a neutral assistant tends to explain the
 The agent can only reason over what you paste. In a flat spreadsheet there is no real dependency graph, so "the chain between assumptions and outputs" is reconstructed by inference and can be wrong in exactly the place that matters. And the map it produces is a one-off: change one input and you have to ask again, because nothing holds the structure for you.
 
 When you hit that, reach for:
-- [Layerz](https://layerz.cc) (via [`layerz-mcp`](https://github.com/layerzlabs/layerz-mcp)), where dependencies are explicit and queryable (ask "what depends on this assumption" and get the real answer, not a guess), and the structure persists so the audit stays live as inputs change.
+- [Layerz](https://layerz.cc), where dependencies are explicit and queryable (ask "what depends on this assumption" and get the real answer, not a guess), and the structure persists so the audit stays live as inputs change.
 - [`FINANCE.md`](https://github.com/layerzlabs/finance-md) to capture the conventions the model assumes, so the next person does not start this archaeology from zero.
 
 ## Notes and variations

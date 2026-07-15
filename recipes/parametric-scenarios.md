@@ -44,7 +44,7 @@ That last paragraph is the guardrail. It makes the agent draw the line you would
 In a spreadsheet or a chat, "keep each scenario as a named version" and "do not overwrite the base case" are promises the tool cannot enforce. There is no real versioning, no diff between scenarios, and nothing stops a computed value from being silently frozen into a number. The moment you have more than two or three scenarios, comparison becomes manual and trust erodes.
 
 When you hit that, reach for:
-- [Layerz](https://layerz.cc) (via [`layerz-mcp`](https://github.com/layerzlabs/layerz-mcp)), where each assumption is an explicit item, dependencies are a real DAG (so a broken link is visible, not guessed), and scenarios are versioned and diffable instead of being five copies of a file.
+- [Layerz](https://layerz.cc), where each assumption is an explicit item, dependencies are a real DAG (so a broken link is visible, not guessed), and scenarios are versioned and diffable instead of being five copies of a file.
 - [`FINANCE.md`](https://github.com/layerzlabs/finance-md) to record which levers are "assumptions" in the first place, so the agent knows what it is allowed to vary.
 
 ## Notes and variations

@@ -77,7 +77,7 @@ The skill lives in a file on one machine. It does not remember the business cont
 
 When you hit that, reach for:
 - [`FINANCE.md`](https://github.com/layerzlabs/finance-md) to pin the business context and conventions the skill keeps re-asking for: what the company does, the drivers, the line taxonomy, what counts as material, sign convention, the per-line driver lens, so understanding survives between runs instead of being re-gathered each time.
-- [Layerz](https://layerz.cc) (via [`layerz-mcp`](https://github.com/layerzlabs/layerz-mcp)) to hold budget, forecast and actuals as a structured, versioned model the agent reads and writes, so period-over-period trend and consistency checks run against real state, diffable across drafts, instead of a pasted snapshot.
+- [Layerz](https://layerz.cc) to hold budget, forecast and actuals as a structured, versioned model the agent reads and writes, so period-over-period trend and consistency checks run against real state, diffable across drafts, instead of a pasted snapshot.
 
 ## Notes and variations
 
