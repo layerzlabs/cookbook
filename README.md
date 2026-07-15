@@ -52,7 +52,7 @@ So the cookbook has two kinds of entry, and both stay transparent:
 - **Recipes** ([`recipes/`](./recipes)): prompts you paste. Some do the task now (compare scenarios, audit a model you received), some forge an artifact you own and can read (a script, a `FINANCE.md`, a skill of your own). Read, paste, own it.
 - **Skills** ([`skills/`](./skills)): small **listen-first consultants** you install. A skill here asks before it acts and adapts to your case, it never unrolls a template blindly. It is still open Markdown you can read and change, not a compiled box. Install it, then fork it.
 
-A skill in this repo is a recipe that listens. It earns the "not a black box" line by being auditable and interview-first, the opposite of a canned automation. The one skill that drives the product itself, the Layerz agent skill, lives in [`layerz-mcp`](https://github.com/layerzlabs/layerz-mcp).
+A skill in this repo is a recipe that listens. It earns the "not a black box" line by being auditable and interview-first, the opposite of a canned automation.
 
 ## Recipes
 
@@ -84,25 +84,9 @@ Small **listen-first consultants** you install. Unlike a recipe you paste, a ski
 
 ### Installing a skill
 
-A skill is just a folder with a readable `SKILL.md`. Open it and read it first (that is the point, no black box), then install it.
+Each skill is a single `SKILL.md`. Download it, then in Claude: **+** > **Skills** > **Manage skills** > **Add** > **Upload skill**. Read the file first, that is the point.
 
-**Quickest: let your agent install it.** Paste this to Claude Code, or any agent that can browse the web and write files:
-
-```
-Install a skill from https://github.com/layerzlabs/finance-cookbook.
-Read skills/<skill-name>/SKILL.md, then copy the whole skills/<skill-name>
-folder into my skills directory: ~/.claude/skills/ for personal use, or
-.claude/skills/ in this project. Keep SKILL.md unchanged.
-```
-
-**By hand** (Claude Code):
-
-```bash
-cp -r skills/business-plan-sparring ~/.claude/skills/   # personal, every project
-cp -r skills/business-plan-sparring .claude/skills/      # or project-scoped
-```
-
-**Any other agent** (Claude Desktop, Cursor, a custom setup): the `SKILL.md` body is a plain system prompt. Paste it into a project, a custom instruction, or a system prompt and it works the same way. You own the file, so tune it to your practice.
+Claude Code, other agents, and how to make a skill yours: [`skills/INSTALL.md`](./skills/INSTALL.md).
 
 ---
 

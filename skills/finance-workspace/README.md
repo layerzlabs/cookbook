@@ -18,32 +18,15 @@ Your recurring finance work (the monthly close, cost-center reports, the rolling
 
 ## Install
 
-A skill is just this folder with a readable [`SKILL.md`](./SKILL.md). Read it first (no black box), then install it.
+Download [`SKILL.md`](./SKILL.md), then in Claude: **+** > **Skills** > **Manage skills** > **Add** > **Upload skill**.
 
-**Quickest: let your agent install it.** Paste this to Claude Code, or any agent that can browse the web and write files:
-
-```
-Install the "finance-workspace" skill from
-https://github.com/layerzlabs/finance-cookbook (folder
-skills/finance-workspace). Read its SKILL.md, then copy the whole folder
-into my skills directory: ~/.claude/skills/ for personal use, or .claude/skills/
-in this project. Keep SKILL.md unchanged.
-```
-
-**By hand** (Claude Code):
-
-```bash
-cp -r skills/finance-workspace ~/.claude/skills/   # personal, every project
-cp -r skills/finance-workspace .claude/skills/      # or project-scoped
-```
-
-**Any other agent** (Claude Desktop, Cursor, a custom setup): the [`SKILL.md`](./SKILL.md) body is a plain system prompt. Paste it into a project, a custom instruction, or a system prompt and it works the same way. You own the file, so tune it to your practice.
+Read the file first, that is the point. Claude Code and other agents: see [how to install a skill](../INSTALL.md).
 
 ## Where it breaks
 
 A folder of Markdown is context, and context alone is not a model. It does not compute a number, it cannot enforce the conventions it documents, it has no month-over-month state the checks can run against, and it carries no audit trail when accounting pushes a correction. The moment the close has to be reliable rather than merely documented, files that describe the rules stop being enough.
 
-When you hit that wall, reach for [`FINANCE.md`](https://github.com/layerzlabs/finance-md) to pin and enforce the conventions the workspace documents, and [Layerz](https://layerz.cc) (via [`layerz-mcp`](https://github.com/layerzlabs/layerz-mcp)) to hold the close as a structured, versioned model the agent reads and writes, so the checks run against real state instead of a pasted snapshot.
+When you hit that wall, reach for [`FINANCE.md`](https://github.com/layerzlabs/finance-md) to pin and enforce the conventions the workspace documents, and [Layerz](https://layerz.cc) to hold the close as a structured, versioned model the agent reads and writes, so the checks run against real state instead of a pasted snapshot.
 
 ---
 
