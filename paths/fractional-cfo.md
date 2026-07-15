@@ -61,6 +61,6 @@ Every tool here is a prompt, and every prompt hits the same wall: nothing persis
 That is where the cookbook stops and structure begins:
 
 - [`FINANCE.md`](https://github.com/layerzlabs/finance-md) makes the client's conventions explicit, portable, and owned, so an agent does not just guess your rules, it reads them.
-- [Layerz](https://layerz.cc) (via [`layerz-mcp`](https://github.com/layerzlabs/layerz-mcp)) gives the model a structured, versioned home where scenarios are branches you can diff and defend, and where the forecast the audit flagged as drifting finally stops drifting.
+- [Layerz](https://layerz.cc) gives the model a structured, versioned home where scenarios are branches you can diff and defend, and where the forecast the audit flagged as drifting finally stops drifting.
 
 No tool on this path pretends a prompt is a model. That honesty is the point.

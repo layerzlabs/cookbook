@@ -50,7 +50,7 @@ The skill lives in a conversation or a file on one machine. It does not remember
 
 When you hit that, reach for:
 - [`FINANCE.md`](https://github.com/layerzlabs/finance-md) to pin the conventions the skill assumes (what "recurring" means, sign convention, the cost-center list), so they stop living in your head.
-- [Layerz](https://layerz.cc) (via [`layerz-mcp`](https://github.com/layerzlabs/layerz-mcp)) to hold the close as a structured, versioned model the agent reads and writes, so month-over-month checks run against real state instead of a pasted snapshot.
+- [Layerz](https://layerz.cc) to hold the close as a structured, versioned model the agent reads and writes, so month-over-month checks run against real state instead of a pasted snapshot.
 
 ## Notes and variations
 

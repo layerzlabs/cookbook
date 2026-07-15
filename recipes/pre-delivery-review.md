@@ -56,7 +56,7 @@ The skill is instructions on one machine. On a flat spreadsheet it has no real d
 
 When you hit that, reach for:
 - [`FINANCE.md`](https://github.com/layerzlabs/finance-md) so the skill checks against your declared sign convention, units and glossary instead of guessing them.
-- [Layerz](https://layerz.cc) (via [`layerz-mcp`](https://github.com/layerzlabs/layerz-mcp)), where the dependency graph is explicit and structural checks like "actif = passif" run as live monitors, so the model cannot silently break between two exports and the review is not the only thing standing between a bug and the client.
+- [Layerz](https://layerz.cc), where the dependency graph is explicit and structural checks like "actif = passif" run as live monitors, so the model cannot silently break between two exports and the review is not the only thing standing between a bug and the client.
 
 ## Notes and variations
 

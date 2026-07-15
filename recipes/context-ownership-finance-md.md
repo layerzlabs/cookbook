@@ -44,7 +44,7 @@ A `FINANCE.md` documents the conventions, but it is not the model. It says how y
 
 When you hit that, reach for:
 - [`finance-md`](https://github.com/layerzlabs/finance-md) for the full spec, the schema, and sector example files (LBO, SaaS FP&A, infra, SME budget) you can inherit from.
-- [Layerz](https://layerz.cc) (via [`layerz-mcp`](https://github.com/layerzlabs/layerz-mcp)) to bind the conventions to an actual model, so the agent does not just know your rules, it builds under them.
+- [Layerz](https://layerz.cc) to bind the conventions to an actual model, so the agent does not just know your rules, it builds under them.
 
 ## Notes and variations
 
