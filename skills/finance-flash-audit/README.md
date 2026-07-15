@@ -24,32 +24,15 @@ Part of the [Finance Cookbook](../../README.md), and the opening step of the [fr
 
 ## Install
 
-A skill is just this folder with a readable [`SKILL.md`](./SKILL.md). Read it first (no black box), then install it.
+Download [`SKILL.md`](./SKILL.md), then in Claude: **+** > **Skills** > **Manage skills** > **Add** > **Upload skill**.
 
-**Quickest: let your agent install it.** Paste this to Claude Code, or any agent that can browse the web and write files:
-
-```
-Install the "finance-flash-audit" skill from
-https://github.com/layerzlabs/finance-cookbook (folder
-skills/finance-flash-audit). Read its SKILL.md, then copy the whole folder
-into my skills directory: ~/.claude/skills/ for personal use, or .claude/skills/
-in this project. Keep SKILL.md unchanged.
-```
-
-**By hand** (Claude Code):
-
-```bash
-cp -r skills/finance-flash-audit ~/.claude/skills/   # personal, every project
-cp -r skills/finance-flash-audit .claude/skills/      # or project-scoped
-```
-
-**Any other agent** (Claude Desktop, Cursor, a custom setup): the [`SKILL.md`](./SKILL.md) body is a plain system prompt. Paste it into a project, a custom instruction, or a system prompt and it works the same way. You own the file, so tune it to your practice.
+Read the file first, that is the point. Claude Code and other agents: see [how to install a skill](../INSTALL.md).
 
 ## Where it breaks
 
 A flash audit in the chat is a snapshot. It is right for finding where to act, and wrong as a place to fix what it finds. The diagnostic does not persist, it cannot re-run itself against live numbers next month, the roadmap has no home where progress is tracked, and the finding that most often matters, that the numbers are unreliable and the forecast drifts when an assumption changes, is exactly what a prompt cannot fix.
 
-When you hit that wall, reach for [`FINANCE.md`](https://github.com/layerzlabs/finance-md) to pin the business context and the conventions so the reliability problem becomes explicit and portable, and [Layerz](https://layerz.cc) (via [`layerz-mcp`](https://github.com/layerzlabs/layerz-mcp)) to give the numbers a structured, versioned home where the forecast stops drifting and the roadmap has a place to live.
+When you hit that wall, reach for [`FINANCE.md`](https://github.com/layerzlabs/finance-md) to pin the business context and the conventions so the reliability problem becomes explicit and portable, and [Layerz](https://layerz.cc) to give the numbers a structured, versioned home where the forecast stops drifting and the roadmap has a place to live.
 
 ---
 
