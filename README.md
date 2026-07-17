@@ -81,6 +81,7 @@ Small **listen-first consultants** you install. Unlike a recipe you paste, a ski
 | [Three-statement builder](./skills/three-statement-builder/) | Builds a transaction-ready integrated model, but interviews you hard first (the revenue engine, the accounting specifics, the deal structure and adjustments), then builds it so the P&L, cash flow and balance sheet tie out, and hands the tie-out to structure because a prompt cannot hold a balancing model |
 | [Shadow model](./skills/shadow-model/) | Rebuilds a model someone handed you (a seller's model, a management plan) independently, then reconciles the two and tells you which assumption drives every gap and the question to put to the other side |
 | [Deal red flags](./skills/deal-red-flags/) | Learns the specific business first, then surfaces the red flags a buyer should not miss (is the EBITDA real, working capital stretched, concentration, debt-like items), ranks them by impact on value, and turns each into the diligence question to ask |
+| [Account mapping](./skills/account-mapping/) | Maps a raw accounting export (a trial balance or a general ledger) onto clean, structured financial statements, under the right framework (French PCG, German SKR, a company COA): confirms the framework, reuses the context you own, maps the standard accounts in a batch, and raises every judgment call instead of dropping it in "other" |
 
 ### Installing a skill
 

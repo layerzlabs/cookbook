@@ -47,6 +47,7 @@ The [finance flash audit](../skills/finance-flash-audit/) above. It reuses what 
 
 Once you are engaged, the same jobs come back every period. Reach for the piece that matches what the audit surfaced:
 
+- **A new client hands you a raw accounting export** → [Map the accounts](../skills/account-mapping/) turns a trial balance, a FEC or a QuickBooks dump into a clean, structured P&L: it confirms the framework, maps the standard accounts in a batch, and raises the ambiguous ones instead of guessing them, so you start from something you can read.
 - **The monthly numbers are a grind, or you cannot trust them** → [Forge your analytical review skill](../recipes/analytical-review.md) builds a recurring review that understands the business first, then explains what moved, what does not reconcile, and the questions to raise. If you already have a close skill, [Harden your close skill](../recipes/close-skill-hardening.md) makes it deterministic and gap-proof.
 - **You inherited a model or a business plan you do not understand** → [Audit an inherited model](../recipes/model-audit-controller.md) helps you read and stress-test someone else's model fast, before you stake a decision on it.
 - **A decision needs scenarios, not one number** → [Parametric scenarios](../recipes/parametric-scenarios.md) generates and compares assumption-level cases without the model falling apart.

@@ -18,7 +18,7 @@ Two ways in, depending on the deal:
 ## The full path
 
 ### 1. Get on top of the numbers
-[Three-statement builder](../skills/three-statement-builder/) if you are building, [audit an inherited model](../recipes/model-audit-controller.md) if you received one. Either way, understand it before you trust it.
+If what you were handed is a raw accounting export (a trial balance, a FEC, a target's chart of accounts), [map the accounts](../skills/account-mapping/) first: it confirms the framework, turns the export into a clean structured P&L, and flags the ambiguous accounts instead of guessing them, so you build or audit on numbers you can read. Then [three-statement builder](../skills/three-statement-builder/) if you are building, [audit an inherited model](../recipes/model-audit-controller.md) if you received one. Either way, understand it before you trust it.
 
 ### 2. Challenge what you do not trust
 [Shadow model](../skills/shadow-model/) rebuilds their model independently from the drivers, then reconciles: for each material gap, which assumption drives it and the question to put to the other side. The bridge, not a second opinion.
