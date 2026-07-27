@@ -11,7 +11,7 @@ This is the **cookbook**. It sits in a small family of open entry points to [Lay
 
 | Project | Role | Link |
 |---------|------|------|
-| **`finance-cookbook`** (you are here) | The **recipes**: how finance people actually use AI, day to day | the playbook |
+| **`cookbook`** (you are here) | The **recipes**: how finance people actually use AI, day to day | the playbook |
 | [`finance-md`](https://github.com/layerzlabs/finance-md) | The **standard**: how an organization encodes its financial conventions for any agent | the spec |
 | [Layerz MCP](https://app.layerz.cc/for-agents) | The **tool**: how an agent drives [Layerz](https://layerz.cc) to build structured, versioned models | the integration |
 | [`slides-for-claude`](https://github.com/layerzlabs/slides-for-claude) | The **presentations**: turn a model or a topic into a self-contained HTML deck | the skill |
@@ -109,6 +109,19 @@ The cookbook above is what we wrote. The library below is what *others* wrote an
 - **AI builders in finance** who live in Claude Code, Cursor, Cowork, and want patterns that hold up.
 - **Educators and advisors** who need serious, recommendable bricks, beyond a list of prompts.
 - **Finance practitioners** (FP&A, controllers, fractional CFOs) tired of re-deriving everything each month.
+
+---
+
+## Background reading
+
+Recipes tell you what to ask for. These say why, with sources and method:
+
+- [Spreadsheet errors and risks](https://app.layerz.cc/resources/spreadsheet-errors-and-risks) — how often spreadsheets are wrong, and what it has cost
+- [LLM reliability](https://app.layerz.cc/resources/llm-reliability-statistics) — where an agent's output stops being trustworthy, measured
+- [AI in finance](https://app.layerz.cc/resources/ai-in-finance-statistics) — adoption and outcomes, not vendor claims
+- [All reference pages](https://app.layerz.cc/resources)
+
+On practice: [building a model that doesn't drift](https://app.layerz.cc/blog/financial-model-that-doesnt-drift) · [token efficiency in finance](https://app.layerz.cc/blog/token-efficiency-finance-ai) · [auditable models](https://app.layerz.cc/blog/build-an-auditable-financial-model)
 
 ---
 

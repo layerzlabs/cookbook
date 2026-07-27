@@ -24,7 +24,7 @@ A skill is just this folder with a readable [`SKILL.md`](./SKILL.md). Read it fi
 
 ```
 Install the "deal-red-flags" skill from
-https://github.com/layerzlabs/finance-cookbook (folder
+https://github.com/layerzlabs/cookbook (folder
 skills/deal-red-flags). Read its SKILL.md, then copy the whole folder
 into my skills directory: ~/.claude/skills/ for personal use, or .claude/skills/
 in this project. Keep SKILL.md unchanged.
