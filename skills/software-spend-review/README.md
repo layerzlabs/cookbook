@@ -2,7 +2,7 @@
 
 > A listen-first consultant that turns raw bank or card transactions into a structured view of what you actually spend on software, cloud and AI. Its core job is the part everything else gets wrong: one vendor line is not one cost. It splits the composite bills before it counts anything, asks for the billing detail instead of guessing an allocation, and reports what it cannot resolve.
 
-Part of the [Finance Cookbook](../../README.md). This is a **skill**, not a black box: [`SKILL.md`](./SKILL.md) is plain, readable Markdown. Open it and read it before you install it, that is the point.
+Part of the [Finance Cookbook](../../README.md), and a step in the [part-time CFO path](../../paths/fractional-cfo.md). This is a **skill**, not a black box: [`SKILL.md`](./SKILL.md) is plain, readable Markdown. Open it and read it before you install it, that is the point.
 
 ## The problem
 
