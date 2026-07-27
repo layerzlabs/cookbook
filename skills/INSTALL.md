@@ -24,7 +24,7 @@ Or ask your agent to do it for you:
 
 ```
 Install the "<skill-name>" skill from
-https://github.com/layerzlabs/finance-cookbook (folder skills/<skill-name>).
+https://github.com/layerzlabs/cookbook (folder skills/<skill-name>).
 Read its SKILL.md, then copy the whole folder into my skills directory:
 ~/.claude/skills/ for personal use, or .claude/skills/ in this project.
 Keep SKILL.md unchanged.
