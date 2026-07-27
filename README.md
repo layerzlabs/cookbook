@@ -116,6 +116,7 @@ The cookbook above is what we wrote. The library below is what *others* wrote an
 
 Recipes tell you what to ask for. These say why, with sources and method:
 
+- **[The finance engineer role](https://app.layerz.cc/resources/finance-engineer-statistics)** — who is being hired to do this work, measured from 27,278 open postings. What the job is called, where it sits, what tools it names, what it pays. See also [what those job descriptions are really asking for](https://app.layerz.cc/blog/finance-engineer-job-description)
 - [Spreadsheet errors and risks](https://app.layerz.cc/resources/spreadsheet-errors-and-risks) — how often spreadsheets are wrong, and what it has cost
 - [LLM reliability](https://app.layerz.cc/resources/llm-reliability-statistics) — where an agent's output stops being trustworthy, measured
 - [AI in finance](https://app.layerz.cc/resources/ai-in-finance-statistics) — adoption and outcomes, not vendor claims
