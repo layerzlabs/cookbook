@@ -82,6 +82,7 @@ Small **listen-first consultants** you install. Unlike a recipe you paste, a ski
 | [Shadow model](./skills/shadow-model/) | Rebuilds a model someone handed you (a seller's model, a management plan) independently, then reconciles the two and tells you which assumption drives every gap and the question to put to the other side |
 | [Deal red flags](./skills/deal-red-flags/) | Learns the specific business first, then surfaces the red flags a buyer should not miss (is the EBITDA real, working capital stretched, concentration, debt-like items), ranks them by impact on value, and turns each into the diligence question to ask |
 | [Account mapping](./skills/account-mapping/) | Maps a raw accounting export (a trial balance or a general ledger) onto clean, structured financial statements, under the right framework (French PCG, German SKR, a company COA): confirms the framework, reuses the context you own, maps the standard accounts in a batch, and raises every judgment call instead of dropping it in "other" |
+| [Software spend review](./skills/software-spend-review/) | Turns raw bank or card transactions into a defensible view of software, cloud and AI spend, starting with the part naive categorisation gets wrong: one vendor line is not one cost, so it splits the composite bills (seats, usage, tokens, payment fees, marketplace resale) before counting anything, asks for the billing detail instead of guessing an allocation, and reports what it cannot resolve |
 
 ### Installing a skill
 
