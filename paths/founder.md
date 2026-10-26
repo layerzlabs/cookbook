@@ -10,12 +10,15 @@ The pieces a founder actually reaches for when there is no CFO yet: get a model 
 
 ## Start here: get a model on the table
 
-The hard part is never the arithmetic, it is starting. The **[business plan sparring partner](../skills/business-plan-sparring/)** gets a rough model up fast, challenges every assumption like a seed investor by Socratic questioning, helps you pick the few KPIs you steer by, and teaches the finance as it goes. Run it first, on your own plan.
+The hard part is never the arithmetic, it is deciding what the plan is for and which few assumptions move it. The **[business plan sparring partner](../skills/business-plan-sparring/)** asks where the project stands, finds the three to five drivers that matter, challenges them like a seed investor by Socratic questioning, and ends with a one-page plan brief. Then **[plan to model](../skills/plan-to-model/)** lays that brief out as a model you can show. Run them in that order, on your own plan.
 
 ## The full path
 
-### 1. Build the plan
-[Business plan sparring partner](../skills/business-plan-sparring/) above. Motion before polish: a rough, honest model you can think with, not a pristine one you did not reason through.
+### 1. Set the foundations
+[Business plan sparring partner](../skills/business-plan-sparring/) above. Purpose and stage first, then the drivers, then a one-page plan brief: a rough, honest plan you can think with, not a pristine one you did not reason through.
+
+### 1b. Lay it out as a model
+[Plan to model](../skills/plan-to-model/) turns the brief into a model a banker or investor can read cold: assumptions in one place, cash kept apart from revenue, checks that flag when the plan breaks, a dashboard of a few numbers.
 
 ### 2. Own what it assumes
 [Own your context with FINANCE.md](../recipes/context-ownership-finance-md.md) captures your conventions, units and definitions in a file you own, so the next session and the next tool start from your model, not a blank interview. This is what makes the plan survive past the first conversation.
