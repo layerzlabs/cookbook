@@ -18,7 +18,7 @@ The hard part is never the arithmetic, it is deciding what the plan is for and w
 [Business plan sparring partner](../skills/business-plan-sparring/) above. Purpose and stage first, then the drivers, then a one-page plan brief: a rough, honest plan you can think with, not a pristine one you did not reason through.
 
 ### 1b. Lay it out as a model
-[Plan to model](../skills/plan-to-model/) turns the brief into a model a banker or investor can read cold: assumptions in one place, cash kept apart from revenue, checks that flag when the plan breaks, a dashboard of a few numbers.
+[Plan to model](../skills/plan-to-model/) turns the brief into a first model in one pass, that a banker or investor can read cold: assumptions per year with their sources, cash kept apart from revenue, checks that flag when the plan breaks, two dashboards of a few numbers.
 
 ### 2. Own what it assumes
 [Own your context with FINANCE.md](../recipes/context-ownership-finance-md.md) captures your conventions, units and definitions in a file you own, so the next session and the next tool start from your model, not a blank interview. This is what makes the plan survive past the first conversation.
