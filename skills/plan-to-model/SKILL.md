@@ -2,17 +2,19 @@
 name: plan-to-model
 description: >-
   Lays out a business plan as a clean, readable financial model once its
-  foundations are set: one assumptions block, operational drivers as real
-  lines, revenue and cash kept apart where they drift (deferred revenue,
-  payment terms, stock, grants), checks that flag when the plan breaks, and a
-  small dashboard tied to the decision the plan serves. Starts from a plan
-  brief (the output of the business-plan-sparring skill) or asks for its
-  contents, proposes the layout out loud before building, and builds at the
-  depth the project's stage calls for. Use when someone says "now build the
-  model", "turn this plan into a model", "put my BP in Layerz", "how should I
-  structure my model", or "make this model presentable". Works in a
-  spreadsheet, in a chat or in Layerz over MCP. Not for transaction models
-  (use three-statement-builder).
+  foundations are set: assumptions per fiscal year with their sources, the
+  revenue driver as a real line, revenue and cash kept apart where they drift
+  (deferred revenue, payment terms, grants, loans), three statements that tie,
+  checks that flag when the plan breaks, and two sober dashboards. Starts from
+  a plan brief (the output of the business-plan-sparring skill) or asks for
+  its contents, proposes the layout once, then builds the whole first version
+  in one pass, with a single base case. In Layerz, the model is written by a
+  short Python script (bpkit) and applied as one blueprint: about ten calls,
+  about ten minutes. Use when someone says "now build the model", "turn this
+  plan into a model", "put my BP in Layerz", "how should I structure my
+  model", or "make this model presentable". Works in a spreadsheet, in a chat
+  or in Layerz over MCP. Not for transaction models (use
+  three-statement-builder).
 ---
 
 # Plan to model
@@ -28,9 +30,12 @@ reason to exist, every number has a source, and the model tells you when it brea
   the stage in one line. If there is none, ask for its contents (purpose, stage, 3 to 5
   drivers, main costs, cash timing, funding, KPIs), in at most three questions per turn,
   or suggest running `business-plan-sparring` first. Never build from a pitch deck alone.
-- **Propose before you build.** Lay out the structure out loud, sections and lines on one
-  screen, and get a yes. Building is cheap; unbuilding a model the founder no longer
-  understands is not.
+- **Propose once, then build in one pass.** Lay out the structure on one screen (sections,
+  lines, checks, dashboards) and get a yes. Then build the whole first version at once:
+  never block by block, never one line per turn. A model built in thirteen steps stalls at
+  step one; a complete first version gives the founder something to react to.
+- **One scenario in the first model: the base case.** Variants (a delayed raise, a slower
+  ramp-up, a lost grant) come later, when the founder asks for them.
 - **Build at the stage, not beyond.** The depth comes from the brief's stage (table
   below). Extra lines are a cost: each one is something to explain and maintain.
 - **Short turns.** Report what you built in a few lines, then the two or three numbers
@@ -43,31 +48,62 @@ reason to exist, every number has a source, and the model tells you when it brea
 | Idea | Assumptions, revenue from drivers, 4 to 6 cost lines, simple P&L, cash and runway. Monthly, 12 to 24 months | Balance sheet, tax detail, depreciation |
 | First customers | Plus cash timing (payment terms, upfront billing), hiring plan, capacity driver | Full balance sheet unless a bank asks |
 | Revenue | Plus unit economics, deferred revenue where billing leads revenue, working capital | Segment splits nobody steers by |
-| Raise or loan | Three statements tied (P&L, cash flow, balance sheet), use of funds, debt schedule, base and downside | Ten-year horizons |
+| Raise or loan | Three statements tied (P&L, cash flow, balance sheet), use of funds, debt schedule | Ten-year horizons, scenarios before the base case is agreed |
+
+## Assumptions: per fiscal year, not per month
+
+A first-pass plan is reviewed and changed year by year. Monthly inputs are hard to read and
+harder to edit, so:
+
+- **Amounts and volumes per fiscal year** (cost lines, one-off services, marketing budget,
+  hires): one number per year, spread evenly over the months of that year. A first partial
+  year (say November and December) takes the amount for those months only.
+- **Prices, rates, durations: constants.**
+- **Dated events** (a raise, a grant, a launch, a go-live): an amount and a month, not a
+  series of 50 cells.
+- **The revenue driver stays monthly**, because it carries the rhythm of growth. Two
+  forms, depending on the business:
+  - **a monthly calendar** when the founder has one (long-cycle B2B, a few named
+    customers, pilots, a pipeline): customer by customer;
+  - **a monthly growth rate set per year** when volumes are continuous (B2C, e-commerce,
+    self-serve SaaS): a starting point and a growth rate for each year. Avoid it on a
+    handful of customers a year: a percentage of one signature means nothing.
+- **Every assumption carries its source**: a person and a date ("Source: founder, brief of
+  November 2026"), a working document of the founder, with the tab or cell when useful
+  ("cost file 2026-2028, Opex tab"), a publication ("SaaS Capital 2025"), or "Model
+  assumption, to validate". A file that is only an earlier version of the model (a plan
+  someone else already built) is not a source: go back to what fed it.
+
+Spreading a yearly amount moves a little cash within the year (a payment due in May becomes
+twelve monthly ones): say so when the cash low point is tight.
 
 ## How a model should be laid out
 
-Top to bottom, in this order, so a reader follows the logic downward:
+Few tabs. A reader opens the dashboards, then the statements, then the assumptions; the
+workings are there for audit, not for reading. In this order:
 
-1. **Assumptions.** Every input lives here and only here: operational drivers (leads,
-   conversion, churn, capacity, headcount), prices, cost rates, timing (payment days,
-   billing frequency), funding events. Each assumption carries a one-line note: where the
-   number comes from (the founder's guess, a quote, a benchmark) and how confident it is.
-2. **Operations.** The non-financial lines computed from the drivers: customers, active
-   users, units sold, FTEs, capacity used. They are what the founder actually steers, so
-   they are lines, not hidden multipliers inside a revenue formula.
-3. **Revenue.** Price times volume, per line of business only if each line is steered
-   differently.
-4. **P&L.** Revenue, direct costs, gross margin, operating costs grouped the way the
-   founder thinks of them (people, marketing, rent, tools), EBITDA, then below it only
-   what the stage needs.
-5. **Cash.** Starts from the P&L and corrects for every gap the brief named: billings
-   versus revenue, customer and supplier payment terms, stock, capex, VAT, grants,
-   loans, equity. Closing cash rolls from opening cash plus flows.
-6. **Balance sheet**, at the raise stage or when a bank asks: closing cash from the cash
-   section, deferred revenue, receivables, payables, equity with accumulated results.
-7. **Checks.** See below.
-8. **Dashboard.** See below.
+1. **Dashboards** (see below).
+2. **Income statement**, **balance sheet**, **cash flow**: each on its own tab, with only
+   the lines a reader expects. No intermediate engine (deferred revenue roll, tax loss
+   pool) inside a statement: it lives in the workings and the statement reads it.
+3. **Assumptions**, one tab with blocks: revenue, team, costs, fixed assets, financing,
+   benchmarks.
+4. **KPIs and checks**, one tab.
+5. **Workings**, one tab, folded, last: customers and contracts, billing and revenue,
+   collections, payroll, operating costs by department, hosting or capacity, depreciation,
+   loans and raise, grants, tax.
+
+Statement content, as a reference:
+- **Income statement**: revenue, cost of sales, gross margin, operating costs by
+  department (R&D, sales and marketing, customer success, G&A), total operating costs,
+  EBITDA, depreciation, grants, interest, tax, net income.
+- **Balance sheet**: cash, receivables, other receivables, current assets, net fixed
+  assets, total assets; overdraft, payables, social and tax liabilities, deferred revenue,
+  current liabilities, financial debt, shareholder loans, share capital and premium,
+  retained earnings, result of the year, total liabilities and equity. A line that does not
+  apply stays, at zero.
+- **Cash flow**: operating (EBITDA, working capital changes, tax), investing, financing
+  other than the raise, the raise, change in cash, opening, closing.
 
 ## Rules that keep a model honest
 
@@ -75,94 +111,142 @@ Top to bottom, in this order, so a reader follows the logic downward:
   hardcoded figure in the P&L is the first thing a reader stops trusting.
 - **Drivers explicit.** Revenue = customers × price, not last year × 1.2. Costs as
   fixed, per unit, or per hire.
-- **Natural signs.** Revenue and cash in positive, costs and cash out negative, stated
-  once in the conventions.
-- **One grain per section.** Do not feed a yearly line into a monthly formula.
-- **Stocks roll, flows add.** Cash, deferred revenue, ARR, debt and headcount are stocks:
-  opening value plus the period's flows. Revenue, costs and hires are flows.
-- **Names a non-finance reader understands**, in the founder's language. Units and
-  currency stated once (thousands or units, VAT included or excluded).
-- **Base case boring.** Optimistic and pessimistic cases are separate scenarios that
-  change a few assumptions, never a nudged base.
+- **Natural signs.** Revenue and cash in positive, costs and cash out negative in the
+  statements, stated once in the conventions. Cost assumptions are entered positive.
+- **Stocks roll, flows add.** Cash, deferred revenue, ARR, debt and active customers are
+  stocks: opening value plus the period's flows. In the yearly view a stock shows its
+  December value, a flow the sum of its months, a rate its average.
+- **Names a non-finance reader understands**, in the founder's language, without technical
+  prefixes ("Revenue", not "REV · Revenue"). Units and currency stated once.
+- **Formats on every line**: amounts with one decimal in thousands, negatives in brackets,
+  a dash for zero; rates in percent; multiples as "x"; dates as months.
+- **Tax on the fiscal year**, never month by month: a monthly tax line taxes the
+  profitable months of a loss-making year.
 
 ## The cash and revenue patterns that matter early
 
 - **Upfront billing (SaaS, annual memberships, prepaid services).** Billings are cash;
-  revenue is recognized month by month. Model a deferred revenue stock (*produits
-  constatés d'avance*): opening + billings − revenue recognized. It must never go
-  negative. A founder who sells annual plans looks cash-rich and revenue-poor; the model
-  should show both.
-- **Payment terms.** Receivables = revenue × days to be paid / days in the period.
-  Public and large customers often pay at 60 days or more.
-- **Stock and deposits.** Cash leaves before the sale. Show it.
-- **Grants, subsidies, honour loans.** Separate lines below revenue, with their real
-  timing (often a share upfront and the rest on proof of spend). Never as revenue.
+  revenue is recognized month by month. Model a deferred revenue stock: opening +
+  billings − revenue recognized. It must never go negative. Revenue comes from the billing
+  stock, never from active customers × price (that overstates revenue as the base grows).
+- **Payment terms.** Collections lag billings by the payment delay. Public and large
+  customers often pay at 60 days or more.
+- **Payroll.** One line per person and per pay phase (start and end dates); loaded cost =
+  salary × (1 + employer rate); social charges paid quarterly when that is the rule.
+- **Grants, subsidies, honour loans.** Separate lines below EBITDA or in financing, with
+  their real timing (often a share upfront and the rest on proof of spend). Never revenue.
+- **Loans with fixed instalments.** Outstanding capital as a stock; interest on the opening
+  balance of the month; repayment = instalment − interest.
 - **VAT**, when the founder needs a monthly cash view: collected and paid VAT shift cash
   by a month or a quarter.
 
 ## Checks
 
-Add the checks that fit the stage, each as a line that flags when it fails:
+Add the checks that fit the stage, each as a line that must stay at zero (or true):
 
-- Cash stays above zero, or the month it does not is shown as the runway.
-- Balance sheet balances every period (assets − liabilities − equity = 0), when there is
-  one; cash in the balance sheet equals closing cash in the cash section.
-- Deferred revenue never negative.
-- Splits sum to 100% (channels, mixes, allocations).
-- Capacity holds: customers served per person or units per machine stay within what the
-  assumptions say is possible.
-- Gross margin within a range the founder named as plausible.
+- Balance sheet balances every period; cash in the balance sheet equals closing cash.
+- The presented cash flow adds up to the change in cash.
+- Deferred revenue, receivables and outstanding loans never negative.
+- Operating costs by department equal operating costs by nature.
+- Cash stays above zero, or the month it does not is shown.
 
-After building, run them and report which pass. A failing check is a finding to discuss,
-not something to hide by tweaking a number.
+Before delivering: checks green, the yearly column reread (each flow = the sum of its 12
+months, each stock = its December value), and **three numbers redone by hand from the
+brief** (a month of billing, a loaded salary, a yearly cost total). A green check proves
+the model is consistent, not that it is right.
 
-## Dashboard
+## Dashboards
 
-One screen, four to six tiles, tied to the purpose in the brief:
+**Two dashboards in a first pass**, each read at a glance. If there is more to show, make
+another dashboard; never a crowded one.
 
-- top: the number the business lives or dies on;
-- under it: the two or three drivers that move it;
-- the cash line and the runway;
-- one or two ratios that turn red if the plan breaks (gross margin, payback, burn
-  multiple, debt service cover for a bank).
+- **Exactly 4 KPIs on top**, on one row.
+- **Just below, top left: one table**, yearly, with few lines (about five), at half width.
+  Two tables at most, exceptionally. Never staggered.
+- **1 to 3 charts** filling the grid. An accumulated stock (ARR, cash), especially alone on
+  its chart: a **monthly area**. Profitability year after year (revenue and EBITDA, the
+  break-even): **yearly bars**. A chart splitting cash flows by type teaches the reader
+  nothing: leave it out.
 
-A raise dashboard shows growth, burn and runway. A go / no-go dashboard shows margin,
-payback and break-even. A bank dashboard shows cash and repayment capacity. If a tile
-would not change a decision, cut it.
+A typical founder plan:
+- **Summary**: ARR (or revenue) and EBITDA of the last year, minimum cash and its month;
+  a short income statement (revenue, gross margin, operating costs, EBITDA, net income);
+  revenue and EBITDA bars; a cash area.
+- **Growth and KPIs**: active customers, LTV / CAC, gross margin, failed checks; yearly
+  KPIs against benchmarks; an ARR area.
+
+Flag what an investor will challenge: runway under 18 months after the raise, LTV / CAC
+outside 3-5x (above 10x usually means churn or acquisition cost is unrealistic), costs
+frozen while customers double, deferred revenue going negative.
 
 ## How to run the session
 
 1. **Read the brief**, restate purpose and stage in one line, confirm.
-2. **Propose the layout**: the sections above at the stage's depth, the lines in each,
-   the checks and the dashboard tiles. One screen. Get a yes or the changes.
-3. **Build the first pass** at that depth.
-4. **Run the checks** and read back three numbers: cash at the end of the horizon, the
-   runway, the month it breaks even (or that it does not).
-5. **Hand over**: what to look at first, the two assumptions most worth challenging, and
-   what to add only if a reader asks for it.
+2. **Propose the layout**: the tabs above at the stage's depth, the lines in each, the
+   checks and the dashboard tiles. One screen. Get a yes or the changes.
+3. **Build the whole first version in one pass.**
+4. **Verify** (checks, yearly column, three numbers by hand) and read back the key
+   numbers: cash at the end of the horizon, the minimum cash and its month, the month it
+   breaks even (or that it does not).
+5. **Hand over**: what to look at first, the two assumptions most worth challenging, the
+   open questions for the founder.
+6. **Each round of changes afterwards** is one edit pass, with the before and after on
+   revenue, EBITDA and minimum cash. Never rebuild the model for a change.
 
 ## In Layerz (if its MCP tools are available)
 
-Layerz holds the structure this skill describes: assumptions, formulas, rolling
-balances, checks and dashboards are native items, scenarios are branches. Work this way:
+Layerz holds the structure this skill describes: assumptions, formulas, rolling balances,
+checks and dashboards are native items, scenarios are branches, and the model exports to a
+live Excel workbook.
 
-- **Conventions first.** Call `layerz_get_conventions` with `include_guide: true` and
-  follow the modeling guide it returns for every syntax question (roles, formulas,
-  balances, lists, branches). Do not guess the format from memory.
-- **FINANCE.md from the brief.** Create the model, then write its FINANCE.md from the
-  plan brief: purpose, stage, currency, units, sign convention, the structure of the
-  statements, the glossary of drivers. The next session starts from it.
-- **Build the sections in one blueprint**, validated with a dry run first, in the order
-  above: an Assumptions section, then Operations, Revenue, P&L, Cash, the balance sheet
-  if the stage calls for it.
-- **Stocks as balances.** Cash, deferred revenue, receivables, debt and ARR are
-  `balance` items with their flows attached, never a cumulated formula.
-- **Notes on assumptions** carry the source and confidence from the brief.
-- **Checks** are flagged on the control lines; read the model's health after each batch
-  and fix what fails before going further.
-- **Dashboard** with KPI tiles and one or two charts, as above.
-- **Scenarios** as branches that override a few assumptions, never copies of the model.
-- **Share** a read-only link when a coach, an investor or a banker should see it.
+**Method: a script, one blueprint.** Do not write the model line by line through tool calls,
+and do not paste a large JSON into a call when a file will do. Write a `gen.py` that imports
+`bpkit.py` (in this skill's folder) and produces `bp.json`. Monthly series, when there are
+any, are generated by loops (`bp.events`, `bp.from_month`), never typed.
+
+| # | Call | What |
+|---|---|---|
+| 1 | `layerz_create_model` | `name`, `subtitle`, `glyph`, `timelines`: **monthly and yearly, same start and end** (without the yearly one, the export has no fiscal-year columns) |
+| 2 | `layerz_patch` | `[bpkit.meta_op(finance_md=…)]`: the FINANCE.md, whose front matter `units: k` gives amounts their decimal |
+| 3 | `layerz_build_from_blueprint` | `dry_run: true`. Fix **every** error in `gen.py`, regenerate, resend |
+| 4 | `layerz_build_from_blueprint` | apply (`mode: "merge"`, never `replace`). The UIDs of the dry run hold for the apply |
+| 5 | `layerz_read` | verification: `health`, then yearly values of the key lines |
+| 6 | `layerz_patch` ×2 | **filing**: `bp.group_ops()` creates the grouping sections, then `bp.group_ops(name_to_uid, group_uids)` files the sections under them and folds the workings |
+| end | `layerz_export` | the Excel workbook, from `download_url` |
+
+**Passing the blueprint**: with a terminal and network access (Claude Code, Claude
+Desktop), `layerz_create_upload_url`, `curl -X PUT --data-binary @bp.json` to the signed URL,
+then `layerz_build_from_blueprint { file_id }` (top level, not inside `blueprint`). Without
+network access (claude.ai), pass the content of `bp.json` as is in `blueprint`.
+
+**Layerz specifics**:
+- **Assumptions per year**: `h.a(name, per_year={2027: 12, 2028: 14})`. A monthly formula
+  reads it with a bare reference: Layerz spreads the yearly amount over the months of the
+  year (no `/ 12`). A rate set per year takes `avg=True`. The warning "the horizon covers
+  only part of a yearly period" is expected on a first partial year.
+- **Dated event**: amount and date as constants, read by
+  ``IF(IN_PERIOD(`Raise · month`), `Raise · amount`, 0)``.
+- **Aggregation**: `bpkit` writes it on every formula: `sum` by default, `stock=True`,
+  `avg=True`, `first=True` (opening cash: `` `Closing cash`_M-1 ``), `check=0.01` for a
+  control line (the default tolerance of 1 is too wide in thousands).
+- **Formats**: built-in only (`default`, `decimal_2`, `percent`, `percent_2`, `multiple`,
+  `integer`, `date_mmmyy`). A KPI takes the format of its target line.
+- **Tabs**: the statements are root sections without a group, each its own tab; the rest is
+  filed by `group_ops`. Create sections in reading order: reordering root sections over MCP
+  is not reliable yet.
+- **Dashboards**: `bp.dashboard(name)`, then `d.kpi` ×4, `d.table`, `d.chart`; `bpkit`
+  places the widgets and refuses a fifth KPI, a fourth chart or a third table.
+- **Names** are unique across the model (sections, items, list items); a section is never
+  named like a line. A callup keeps the name of its source.
+- **Lists** (staff, cost lines, departments, loans) are declared in the same blueprint
+  (`bp.lst`), with `mapped_to` to roll lines up by department.
+- **Minimum cash**: ``IF(PERIOD_INDEX = 0, `Cash`, MIN(`Minimum cash`_M-1, `Cash`))``, a
+  stock; its December value of the last year is the low point of the horizon.
+- **Scenarios, later**: one branch per scenario, rewriting the data on the branch (no
+  switch in the model). The cash chart then goes `by_branch`, on a dedicated dashboard.
+- **Each round of changes**: one `layerz_patch` with `dry_run` and `compare_values`, then for
+  real, then a new export.
+- **Share** a link when a coach, an investor or a banker should see it.
 
 ## The wall (be honest about it)
 

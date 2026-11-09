@@ -11,16 +11,17 @@ Once a founder knows what their plan assumes, the model still has to be built, a
 ## What it does
 
 - **Starts from a plan brief** (the output of [business-plan-sparring](../business-plan-sparring/)), or asks for its contents. It never builds from a pitch deck alone.
-- **Proposes the layout before building**: sections and lines on one screen, at the depth the project's stage calls for. An idea gets a P&L and a cash line; a raise gets three statements that tie.
-- **Lays the model out top to bottom**: assumptions (each with its source and confidence), operations (customers, units, headcount, capacity), revenue, P&L, cash, then the balance sheet when the stage needs it.
-- **Handles the early-stage cash patterns**: upfront billing and deferred revenue (*produits constatés d'avance*), payment terms, stock, grants and honour loans, VAT.
-- **Adds checks** that flag when the plan breaks: cash below zero, a balance sheet that does not balance, deferred revenue going negative, splits that do not sum to 100%, capacity exceeded.
-- **Builds a small dashboard** fitted to the purpose: growth, burn and runway for a raise; margin, payback and break-even for a go / no-go; cash and repayment capacity for a bank.
-- **Works in Layerz over MCP** when it is available, where assumptions, rolling balances, checks, dashboards and scenario branches are native.
+- **Proposes the layout once, then builds the whole first version in one pass**, at the depth the project's stage calls for, with a single base case. Scenarios come later, when the founder asks.
+- **Sets assumptions per fiscal year**, each with its source, so the founder can review and change them year by year. The revenue driver stays monthly: a customer calendar, or a monthly growth rate set per year.
+- **Lays the model out in few tabs**: two dashboards, the income statement, balance sheet and cash flow each on its own tab, then assumptions, KPIs and checks, and the workings folded at the end.
+- **Handles the early-stage cash patterns**: upfront billing and deferred revenue, payment terms, payroll charges, grants and honour loans, loans, VAT.
+- **Adds checks and verifies before delivering**: balance sheet, cash, deferred revenue, and three numbers redone by hand from the brief.
+- **Builds two sober dashboards**: four KPIs, one yearly table, one to three charts.
+- **Works in Layerz over MCP** when it is available: a short Python script (`bpkit.py`, shipped with the skill) writes the whole model as one blueprint, applied in about ten calls. Every later round of changes is one edit with the before and after.
 
 ## Install
 
-Download [`SKILL.md`](./SKILL.md), then in Claude: **+** > **Skills** > **Manage skills** > **Add** > **Upload skill**. If Claude never picks it up, check that code execution is enabled in your settings.
+Download this folder ([`SKILL.md`](./SKILL.md) and [`bpkit.py`](./bpkit.py)) as a zip, then in Claude: **+** > **Skills** > **Manage skills** > **Add** > **Upload skill**. If Claude never picks it up, check that code execution is enabled in your settings.
 
 Read the file first, that is the point. Claude Code and other agents: see [how to install a skill](../INSTALL.md).
 
@@ -32,4 +33,4 @@ When the model has to live for months and be defended, reach for [`FINANCE.md`](
 
 ---
 
-*Written in October 2026 from founder business-plan sessions and a founder coach's practice (deferred revenue and non-financial drivers were her first two asks). First field tests are running with founders in a support programme: treat it as a v1 and tell us where it breaks.*
+*Written in October 2026 from founder business-plan sessions and a founder coach's practice (deferred revenue and non-financial drivers were her first two asks). Reworked in November 2026 after the first field tests: one-pass build, assumptions per year, a single base case, fewer tabs and sober dashboards. Tell us where it breaks.*
